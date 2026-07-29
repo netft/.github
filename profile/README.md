@@ -2,9 +2,10 @@
 
 # Net F/T
 
-**Open-source C++, Python, and ROS software for ATI Net F/T Ethernet force/torque sensors.**
+**Open-source software for ATI Net F/T Ethernet force/torque sensors.**
 
-Build native applications, stream measurements from Python, or integrate force/torque data into ROS and `ros2_control`.
+Build native or Python applications, integrate force/torque data into ROS and
+`ros2_control`, or inspect and record measurements from a desktop viewer.
 
 </div>
 
@@ -12,35 +13,52 @@ Build native applications, stream measurements from Python, or integrate force/t
 
 ## 🧰 Projects
 
-| Project | Interface | What it provides |
+| Project | Best for | What it provides |
 | --- | --- | --- |
-| [**netft-cpp**](https://github.com/netft/netft-cpp) | C++ | Native client library and the `netft` command-line tool |
-| [**pyNetFT**](https://github.com/netft/pyNetFT) | Python | Typed Python API backed by a native C++ core |
-| [**ros-netft**](https://github.com/netft/ros-netft) | ROS 1 & ROS 2 | Standalone ROS driver and `ros2_control` sensor integration |
+| [**netft-cpp**](https://github.com/netft/netft-cpp) | C++ applications and command-line workflows | C++17 SDK and the `netft` command-line tool |
+| [**pyNetFT**](https://github.com/netft/pyNetFT) | Python applications | Typed synchronous Python API backed by a native C++ core |
+| [**ros-netft**](https://github.com/netft/ros-netft) | ROS robots and controllers | ROS 1 and ROS 2 driver with `ros2_control` sensor integration |
+| [**netft-viewer**](https://github.com/netft/netft-viewer) | Live inspection and data capture | Cross-platform desktop plots, health monitoring, bias control, and CSV recording |
 
-> Each project provides its own installation, configuration, API, and development documentation.
+Each repository maintains its own installation, compatibility, API, and
+development documentation.
 
 ## 🚀 Where to start
 
-- Building a **C++ application** or using the command line? Start with [netft-cpp](https://github.com/netft/netft-cpp).
-- Building a **Python application**? Start with [pyNetFT](https://github.com/netft/pyNetFT).
-- Integrating a sensor into a **ROS robot**? Start with [ros-netft](https://github.com/netft/ros-netft).
+- Use [netft-cpp](https://github.com/netft/netft-cpp) for a native C++ application
+  or command-line workflow.
+- Use [pyNetFT](https://github.com/netft/pyNetFT) for a typed Python application.
+- Use [ros-netft](https://github.com/netft/ros-netft) for a standalone ROS driver
+  or `ros2_control` integration.
+- Use [netft-viewer](https://github.com/netft/netft-viewer) to connect without
+  ROS, view all six axes, and record CSV data.
 
-## 📦 Ecosystem capabilities
+## ⚙️ Ecosystem capabilities
 
-- Stream force and torque measurements over Ethernet
-- Discover calibration scales and measurement units from the sensor
-- Access raw counts, calibrated measurements, health information, and faults
-- Use native C++ or typed Python APIs
-- Publish ROS wrench data from ROS 1 and ROS 2
-- Integrate with `ros2_control` force/torque broadcasters
-- Monitor sensors from the `netft` command-line tool
+- Discover calibration scales and measurement units from the sensor before
+  streaming RDT data.
+- Access raw counts, calibrated force and torque, sequence health, device status,
+  and recovery information.
+- Build with C++17 or a typed synchronous Python API.
+- Publish ROS wrench and diagnostics data from ROS 1 and ROS 2.
+- Connect sensors to the standard `ros2_control` force/torque broadcaster.
+- Inspect real-time six-axis plots and capture accepted samples through buffered
+  CSV recording.
+
+## 💻 Platform support
+
+The `netft-cpp` SDK and Net F/T Viewer are tested on Linux, Windows, and macOS.
+Individual interfaces and installation artifacts vary by platform. pyNetFT wheel
+availability and supported ROS distributions are listed in their respective
+repository compatibility tables.
 
 ## 🤝 Support and contributions
 
-Report bugs, request features, or ask project-specific questions through the issue tracker of the relevant repository.
+Report bugs, request features, or ask project-specific questions through the
+issue tracker of the relevant repository.
 
-Contributions are welcome through pull requests. Please review the contributing guidelines and development documentation in each project before submitting changes.
+Contributions are welcome through pull requests. Review the contribution guide
+for the project you plan to change before submitting one.
 
 ---
 
