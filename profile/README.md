@@ -4,65 +4,80 @@
 
 **Open-source software for ATI Net F/T Ethernet force/torque sensors.**
 
-Build native or Python applications, use a cross-platform command line,
-integrate force/torque data into ROS and `ros2_control`, or inspect and record
-measurements from a desktop viewer.
+Build native or Python applications, automate sensor workflows from a
+terminal, integrate force/torque data into ROS and `ros2_control`, or inspect
+and record measurements from a desktop viewer.
+
+[Desktop viewer](https://github.com/netft/netft-viewer/releases) ·
+[Python package](https://pypi.org/project/pynetft/) ·
+[ROS driver](https://github.com/netft/ros-netft) ·
+[C++ SDK](https://github.com/netft/netft-cpp)
 
 </div>
 
----
+## See it in action
 
-## 🧰 Projects
+[![Net F/T Viewer showing six live force and torque panels](assets/netft-viewer.png)](https://github.com/netft/netft-viewer)
 
-| Project | Best for | What it provides |
+Net F/T Viewer connects directly to a sensor without ROS and shows calibrated
+six-axis measurements, raw counts, connection health, and buffered CSV
+recording in one desktop application.
+
+## Choose a project
+
+| I want to… | Project | What it provides |
 | --- | --- | --- |
-| [**netft-cpp**](https://github.com/netft/netft-cpp) | Native C++ applications | Cross-platform C++17 SDK and CMake package |
-| [**netft-cli**](https://github.com/netft/netft-cli) | Terminal use and automation | Cross-platform `netft` command with diagnostics, recording, and structured output |
-| [**pyNetFT**](https://github.com/netft/pyNetFT) | Python applications | Typed synchronous Python API backed by a native C++ core |
-| [**ros-netft**](https://github.com/netft/ros-netft) | ROS robots and controllers | ROS 1 and ROS 2 driver with `ros2_control` sensor integration |
-| [**netft-viewer**](https://github.com/netft/netft-viewer) | Live inspection and data capture | Cross-platform desktop plots, health monitoring, bias control, and CSV recording |
+| Build a native application | [**netft-cpp**](https://github.com/netft/netft-cpp) | Cross-platform C++17 SDK and CMake package |
+| Work in a terminal or script | [**netft-cli**](https://github.com/netft/netft-cli) | Diagnostics, monitoring, structured output, bias, and recording |
+| Build a Python application | [**pyNetFT**](https://github.com/netft/pyNetFT) | Typed synchronous Python API backed by a native C++ core |
+| Integrate a robot or controller | [**ros-netft**](https://github.com/netft/ros-netft) | ROS 1 and ROS 2 driver with `ros2_control` sensor integration |
+| Inspect and record live data | [**netft-viewer**](https://github.com/netft/netft-viewer) | Cross-platform desktop plots, health monitoring, and CSV capture |
 
-Each repository maintains its own installation, compatibility, API, and
-development documentation.
+Each repository maintains its own installation, compatibility, API, safety,
+and development documentation.
 
-## 🚀 Where to start
+## How the projects fit together
 
-- Use [netft-cpp](https://github.com/netft/netft-cpp) for a native C++ application.
-- Use [netft-cli](https://github.com/netft/netft-cli) for interactive terminal
-  work, health checks, scripts, and recording.
-- Use [pyNetFT](https://github.com/netft/pyNetFT) for a typed Python application.
-- Use [ros-netft](https://github.com/netft/ros-netft) for a standalone ROS driver
-  or `ros2_control` integration.
-- Use [netft-viewer](https://github.com/netft/netft-viewer) to connect without
-  ROS, view all six axes, and record CSV data.
+![ATI Net F/T sensor connected to the Net F/T core and four downstream products](assets/ecosystem.svg)
 
-## ⚙️ Ecosystem capabilities
+The projects share the same protocol, calibration, unit, sequence-health, and
+recovery semantics. Downstream applications carry reviewed source snapshots
+of `netft-cpp`, so their release artifacts remain self-contained and do not
+require a separately installed SDK.
 
-- Discover calibration scales and measurement units from the sensor before
-  streaming RDT data.
-- Access raw counts, calibrated force and torque, sequence health, device status,
-  and recovery information.
-- Build with C++17, use a typed synchronous Python API, or automate with the
-  cross-platform CLI.
-- Publish ROS wrench and diagnostics data from ROS 1 and ROS 2.
-- Connect sensors to the standard `ros2_control` force/torque broadcaster.
-- Inspect real-time six-axis plots and capture accepted samples through buffered
-  CSV recording.
+## Quick start
 
-## 💻 Platform support
+### Desktop
 
-The `netft-cpp` SDK, `netft-cli`, and Net F/T Viewer are tested on Linux,
-Windows, and macOS. Individual interfaces and installation artifacts vary by
-platform. pyNetFT wheel availability and supported ROS distributions are listed
-in their respective repository compatibility tables.
+Download an installer or portable archive from the
+[Net F/T Viewer releases](https://github.com/netft/netft-viewer/releases).
 
-## 🤝 Support and contributions
+### Python
 
-Report bugs, request features, or ask project-specific questions through the
-issue tracker of the relevant repository.
+```bash
+python -m pip install pynetft
+```
 
-Contributions are welcome through pull requests. Review the contribution guide
-for the project you plan to change before submitting one.
+Continue with the [pyNetFT quick start](https://github.com/netft/pyNetFT#quick-start).
+
+### ROS
+
+Select a supported ROS distribution and installation method in the
+[ROS Net F/T Driver documentation](https://github.com/netft/ros-netft#installation).
+
+## Platform support
+
+`netft-cpp`, `netft-cli`, pyNetFT, and Net F/T Viewer support Linux, Windows,
+and macOS through their documented source builds or release artifacts.
+`ros-netft` supports the ROS distributions listed in its compatibility table.
+Follow each repository's support table for exact operating-system,
+architecture, language, and middleware combinations.
+
+## Support and contributions
+
+Report bugs, request features, or ask project-specific questions in the issue
+tracker of the relevant repository. Contributions are welcome through pull
+requests; review that project's contribution guide before submitting one.
 
 ---
 

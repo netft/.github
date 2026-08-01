@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="360" viewBox="0 0 1100 360" role="img" aria-labelledby="title description">
+  <title id="title">Net F/T software ecosystem</title>
+  <desc id="description">ATI Net F/T sensors connect to a shared native core whose source is included privately by the command line, Python, ROS, and desktop products.</desc>
+  <style>
+    .box { fill: #ffffff; stroke: #1f2328; stroke-width: 1.5; }
+    .core { fill: #1f2328; stroke: #1f2328; stroke-width: 1.5; }
+    .title { fill: #1f2328; font: 600 18px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .label { fill: #1f2328; font: 600 15px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .detail { fill: #59636e; font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .core-title { fill: #ffffff; font: 600 18px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .core-detail { fill: #d0d7de; font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .line { fill: none; stroke: #59636e; stroke-width: 1.5; }
+    @media (prefers-color-scheme: dark) {
+      .box { fill: #0d1117; stroke: #f0f6fc; }
+      .core { fill: #f0f6fc; stroke: #f0f6fc; }
+      .title, .label { fill: #f0f6fc; }
+      .detail { fill: #8b949e; }
+      .core-title { fill: #0d1117; }
+      .core-detail { fill: #57606a; }
+      .line { stroke: #8b949e; }
+    }
+  </style>
+
+  <text class="title" x="550" y="28" text-anchor="middle">One protocol core, five focused products</text>
+
+  <rect class="box" x="35" y="72" width="220" height="84" rx="16"/>
+  <text class="label" x="145" y="106" text-anchor="middle">ATI Net F/T sensor</text>
+  <text class="detail" x="145" y="130" text-anchor="middle">HTTP configuration + UDP RDT</text>
+
+  <path class="line" d="M255 114 H342"/>
+  <path class="line" d="M332 106 L342 114 L332 122"/>
+
+  <rect class="core" x="342" y="72" width="250" height="84" rx="16"/>
+  <text class="core-title" x="467" y="106" text-anchor="middle">netft-cpp</text>
+  <text class="core-detail" x="467" y="130" text-anchor="middle">C++17 protocol and recovery core</text>
+
+  <path class="line" d="M592 114 H630 V206"/>
+  <path class="line" d="M630 206 H135 V232"/>
+  <path class="line" d="M630 206 H410 V232"/>
+  <path class="line" d="M630 206 H685 V232"/>
+  <path class="line" d="M630 206 H960 V232"/>
+
+  <rect class="box" x="25" y="232" width="220" height="88" rx="16"/>
+  <text class="label" x="135" y="266" text-anchor="middle">netft-cli</text>
+  <text class="detail" x="135" y="290" text-anchor="middle">Terminal and automation</text>
+  <text class="detail" x="135" y="308" text-anchor="middle">Private source snapshot</text>
+
+  <rect class="box" x="300" y="232" width="220" height="88" rx="16"/>
+  <text class="label" x="410" y="266" text-anchor="middle">pyNetFT</text>
+  <text class="detail" x="410" y="290" text-anchor="middle">Typed Python bindings</text>
+  <text class="detail" x="410" y="308" text-anchor="middle">Private source snapshot</text>
+
+  <rect class="box" x="575" y="232" width="220" height="88" rx="16"/>
+  <text class="label" x="685" y="266" text-anchor="middle">ros-netft</text>
+  <text class="detail" x="685" y="290" text-anchor="middle">ROS and ros2_control</text>
+  <text class="detail" x="685" y="308" text-anchor="middle">Private source snapshot</text>
+
+  <rect class="box" x="850" y="232" width="220" height="88" rx="16"/>
+  <text class="label" x="960" y="266" text-anchor="middle">netft-viewer</text>
+  <text class="detail" x="960" y="290" text-anchor="middle">Desktop visualization</text>
+  <text class="detail" x="960" y="308" text-anchor="middle">Private source snapshot</text>
+
+  <text class="detail" x="550" y="348" text-anchor="middle">Each downstream product ships its own reviewed core snapshot; users do not install netft-cpp separately.</text>
+</svg>
