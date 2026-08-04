@@ -8,20 +8,20 @@ Build native or Python applications, automate sensor workflows from a
 terminal, integrate force/torque data into ROS and `ros2_control`, or inspect
 and record measurements from a desktop viewer.
 
+[Documentation](https://netft.dev) ·
 [Desktop viewer](https://github.com/netft/netft-viewer/releases) ·
+[CLI](https://github.com/netft/netft-cli) ·
 [Python package](https://pypi.org/project/pynetft/) ·
 [ROS driver](https://github.com/netft/ros-netft) ·
 [C++ SDK](https://github.com/netft/netft-cpp)
 
 </div>
 
-## See it in action
-
-[![Net F/T Viewer showing six live force and torque panels](assets/netft-viewer.png)](https://github.com/netft/netft-viewer)
-
-Net F/T Viewer connects directly to a sensor without ROS and shows calibrated
-six-axis measurements, raw counts, connection health, and buffered CSV
-recording in one desktop application.
+<p align="center">
+  <a href="https://github.com/netft/netft-viewer">
+    <img src="assets/netft-viewer.png" alt="Net F/T Viewer showing six live force and torque panels" width="720">
+  </a>
+</p>
 
 ## Choose a project
 
@@ -33,8 +33,9 @@ recording in one desktop application.
 | Integrate a robot or controller | [**ros-netft**](https://github.com/netft/ros-netft) | ROS 1 and ROS 2 driver with `ros2_control` sensor integration |
 | Inspect and record live data | [**netft-viewer**](https://github.com/netft/netft-viewer) | Cross-platform desktop plots, health monitoring, and CSV capture |
 
-Each repository maintains its own installation, compatibility, API, safety,
-and development documentation.
+Component repositories own source, releases, version-specific notes, and
+contribution instructions. Shared user guides and references live at
+[netft.dev](https://netft.dev).
 
 ## How the projects fit together
 
@@ -45,25 +46,14 @@ recovery semantics. Downstream applications carry reviewed source snapshots
 of `netft-cpp`, so their release artifacts remain self-contained and do not
 require a separately installed SDK.
 
-## Quick start
+## Start here
 
-### Desktop
-
-Download an installer or portable archive from the
-[Net F/T Viewer releases](https://github.com/netft/netft-viewer/releases).
-
-### Python
-
-```bash
-python -m pip install pynetft
-```
-
-Continue with the [pyNetFT quick start](https://github.com/netft/pyNetFT#quick-start).
-
-### ROS
-
-Select a supported ROS distribution and installation method in the
-[ROS Net F/T Driver documentation](https://github.com/netft/ros-netft#installation).
+Use the [installation guide](https://netft.dev/docs/get-started/installation)
+to choose a component and platform, then follow the
+[quick start](https://netft.dev/docs/get-started/quick-start) to connect to a
+sensor. The documentation also provides complete
+[tutorials](https://netft.dev/docs/tutorials/fundamentals/sensor-measurements)
+and [references](https://netft.dev/docs/references/about).
 
 ## Platform support
 
