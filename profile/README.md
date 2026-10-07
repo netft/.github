@@ -37,6 +37,10 @@ Component repositories own source, releases, version-specific notes, and
 contribution instructions. Shared user guides and references live at
 [netft.dev](https://netft.dev).
 
+The organization contains seven repositories: five runtime components above,
+[netft-docs](https://github.com/netft/netft-docs) for shared user documentation,
+and [.github](https://github.com/netft/.github) for organization navigation and policies.
+
 ## How the projects fit together
 
 ![ATI Net F/T sensor connected to the Net F/T core and four downstream products](assets/ecosystem.svg)
@@ -66,7 +70,11 @@ architecture, language, and middleware combinations.
 ## Support and contributions
 
 Report bugs, request features, or ask project-specific questions in the issue
-tracker of the relevant repository. Contributions are welcome through pull
+tracker of the relevant repository. Protocol, calibration and recovery defects
+belong in `netft-cpp`; binding, CLI, ROS or Viewer behavior belongs in its consumer
+repository. Shared guide and reference corrections belong in `netft-docs`, and
+organization navigation belongs in `.github`. SDK fixes precede verified downstream
+snapshot upgrades; each consumer owns its adaptation and release validation. Contributions are welcome through pull
 requests; review that project's contribution guide before submitting one.
 
 ---
