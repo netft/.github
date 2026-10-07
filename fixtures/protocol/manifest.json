@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "rdt": [
+    {
+      "file": "extreme.hex",
+      "accepted": true,
+      "raw_axes": [
+        -2147483648,
+        2147483647,
+        0,
+        -1,
+        1,
+        100
+      ],
+      "rdt_sequence": 4294967295
+    },
+    {
+      "file": "short.hex",
+      "accepted": false
+    },
+    {
+      "file": "long.hex",
+      "accepted": false
+    }
+  ],
+  "calibration": [
+    {
+      "file": "unsafe-scale.xml",
+      "accepted": false,
+      "fault": "SensorConfiguration/DiscoveryError"
+    },
+    {
+      "file": "safe-scale.xml",
+      "accepted": true
+    }
+  ],
+  "sequences": [
+    {
+      "values": [
+        4294967294,
+        4294967295,
+        0,
+        1
+      ],
+      "lost": 0,
+      "out_of_order": 0
+    },
+    {
+      "values": [
+        1,
+        3,
+        2,
+        3
+      ],
+      "lost": 1,
+      "out_of_order": 1,
+      "duplicate": 1
+    }
+  ],
+  "local_failures": [
+    {
+      "case": "queue-full",
+      "cli": "recording exit 8; retain partial",
+      "viewer": "Error; stop acceptance; retain partial"
+    },
+    {
+      "case": "data-final-created-before-promotion",
+      "cli": "I/O exit 6; do not replace destination",
+      "viewer": "Error under Refuse; do not replace destination"
+    },
+    {
+      "case": "metadata-write-failed",
+      "cli": "I/O exit 6; preserve completed data",
+      "viewer": "Error; preserve completed CSV"
+    }
+  ]
+}
