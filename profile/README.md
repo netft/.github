@@ -37,10 +37,6 @@ Component repositories own source, releases, version-specific notes, and
 contribution instructions. Shared user guides and references live at
 [netft.dev](https://netft.dev).
 
-The organization contains seven repositories: five runtime components above,
-[netft-docs](https://github.com/netft/netft-docs) for shared user documentation,
-and [.github](https://github.com/netft/.github) for organization navigation and policies.
-
 ## How the projects fit together
 
 ![ATI Net F/T sensor connected to the Net F/T core and four downstream products](assets/ecosystem.svg)
